@@ -4,7 +4,7 @@ import { getTrending } from "@/api/trending.api";
 
 export const actions = (set: TSet) =>
   ({
-    setSelectedTab: (tab) => set({ selectedTab: tab }),
+    setSelectedTab: (tab) => set(() => ({ selectedTab: tab })),
     setInitialData: async () => {
       // Fetch the data from the API parallel
       const [featured, trending] = await Promise.all([

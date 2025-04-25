@@ -1,7 +1,7 @@
 "use client";
 import { t } from "@/localization";
 import { useController } from "./controller";
-import { CloseIcon, SearchIcon } from "../icons";
+import { CloseIcon, SearchIcon } from "@/components/icons";
 
 export const SearchBar = () => {
   const { searchText, onChange, clearSearch, isClearIconVisible } =

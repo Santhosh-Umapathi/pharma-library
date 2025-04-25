@@ -24,4 +24,16 @@ export const en = {
       label: "Storyboards",
     },
   ],
+  assetSections: [
+    {
+      id: "featured",
+      title: "Featured",
+      description: "Curated top picks from this week",
+    },
+    {
+      id: "trending",
+      title: "Trending",
+      description: "Most popular by community",
+    },
+  ],
 };

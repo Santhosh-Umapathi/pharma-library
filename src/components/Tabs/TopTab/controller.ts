@@ -1,4 +1,4 @@
-import { useLibraryStore } from "@/store/library";
+import { useLibraryStore } from "@/store";
 import { TController } from "./types";
 
 export const useController = ({ id }: TController) => {

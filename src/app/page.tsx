@@ -1,5 +1,6 @@
 import { HeaderSection } from "@/components/HeaderSection";
 import { SearchBar } from "@/components/SearchBar";
+import { TopTabs } from "@/components/Tabs/TopTabs";
 import { t } from "@/localization";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
         description={t.header.description}
       />
       <SearchBar />
+      <TopTabs />
     </div>
   );
 };

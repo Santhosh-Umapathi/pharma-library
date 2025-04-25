@@ -1,11 +1,11 @@
 import data from "@/database/assets.json";
-import { TAsset } from "@/types/assets";
+import { TTrending } from "@/types/trending";
 
 // Mock API to get only trending items
 export const getTrending = async () => {
   const allTrendingAssets = data.filter((item) => item.isTrending);
 
-  const trending: Omit<TAsset, "data">[] = [];
+  const trending: TTrending = [];
 
   // Remove the data property from each item to avoid sending large data
   allTrendingAssets.forEach((item) => {

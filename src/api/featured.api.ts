@@ -1,11 +1,11 @@
 import data from "@/database/assets.json";
-import { TAsset } from "@/types/assets";
+import { TFeatured } from "@/types/featured";
 
 // Mock API to get only featured items
 export const getFeatured = async () => {
   const allFeaturedAssets = data.filter((item) => item.isFeatured);
 
-  const featured: Omit<TAsset, "data">[] = [];
+  const featured: TFeatured = [];
 
   // Remove the data property from each item to avoid sending large data
   allFeaturedAssets.forEach((item) => {

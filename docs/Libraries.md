@@ -6,3 +6,4 @@ Libraries that are installed for the required features
 | ----------- | --------- |
 | NextJS      | ✅        |
 | TailwindCSS | ✅        |
+| zustand     | ✅        |

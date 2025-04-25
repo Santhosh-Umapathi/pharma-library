@@ -85,6 +85,7 @@ All the questions/assumptions from the provided pdf with high level requirements
 3. Request status - Toasts for success/error ?
 4. If the same request was already submitted, feedback to user ?
 5. If user can see his previous requests and status of those requests ? CRUD operations for requests ?
+6. Input validations
 
 ### Assumptions
 
@@ -93,6 +94,7 @@ All the questions/assumptions from the provided pdf with high level requirements
 3. No
 4. No
 5. No, not in scope
+6. No, not in scope
 
 ## 6. Asset Modal base
 

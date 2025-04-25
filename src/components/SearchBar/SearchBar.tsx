@@ -1,10 +1,9 @@
 "use client";
 import { t } from "@/localization";
 import { useController } from "./controller";
-import { TProps } from "./types";
 import { CloseIcon, SearchIcon } from "../icons";
 
-export const SearchBar = ({}: TProps) => {
+export const SearchBar = () => {
   const { searchText, onChange, clearSearch, isClearIconVisible } =
     useController();
   return (

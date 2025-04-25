@@ -9,6 +9,7 @@ export const getTrending = async () => {
 
   // Remove the data property from each item to avoid sending large data
   allTrendingAssets.forEach((item) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { data, ...rest } = item;
     trending.push({ ...rest });
   });

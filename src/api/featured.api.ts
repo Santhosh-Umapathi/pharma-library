@@ -9,6 +9,7 @@ export const getFeatured = async () => {
 
   // Remove the data property from each item to avoid sending large data
   allFeaturedAssets.forEach((item) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { data, ...rest } = item;
     featured.push({ ...rest });
   });

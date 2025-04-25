@@ -18,3 +18,4 @@ Checklist of features that are required to be implemented before starting the de
 | Error Handling (Error Boundaries)                             | ❌     |
 | SEO                                                           | ❌     |
 | Theme - Dark or Light                                         | ❌     |
+| Localization                                                  | ❌     |

@@ -112,3 +112,15 @@ All the questions/assumptions from the provided pdf with high level requirements
 3. Assuming a minor missed requirement for Layout modal and should be included
 4. Only layout modal to be implemented
 5. Yes
+
+## Search Bar
+
+### Questions
+
+1. Should the search results be visible as the user starts to type in ? or after 3 chars min ?
+2. Should the search requests be debounced to min 500ms ?
+
+### Assumptions
+
+1. 3 chars min
+2. yes

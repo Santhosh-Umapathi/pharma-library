@@ -6,4 +6,22 @@ export const en = {
   search: {
     placeholder: "Type to search...",
   },
+  tabs: [
+    {
+      id: "featured",
+      label: "Featured",
+    },
+    {
+      id: "kpi",
+      label: "KPI",
+    },
+    {
+      id: "layouts",
+      label: "Layouts",
+    },
+    {
+      id: "storyboards",
+      label: "Storyboards",
+    },
+  ],
 };

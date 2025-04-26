@@ -11,6 +11,8 @@ export const SearchBar = () => {
     clearSearch,
     isClearIconVisible,
     searchResults,
+    searchResultsRef,
+    searchInputRef,
   } = useController();
   return (
     <div
@@ -24,6 +26,7 @@ export const SearchBar = () => {
         className="w-full p-2 rounded-lg border-2 border-bgSecondary bg-white focus:outline-none hover:border-buttonPrimary focus:border-buttonPrimary transition-colors duration-200 px-10 text-grey-800 placeholder:text-grey-500"
         value={searchText}
         onChange={onChange}
+        ref={searchInputRef}
       />
       <CloseIcon
         className={`absolute right-4 text-grey-800 cursor-pointer hover:text-grey-600 transition-all duration-200 z-20 ${
@@ -33,7 +36,10 @@ export const SearchBar = () => {
       />
       {/* Display search results */}
       {searchResults.length > 0 && (
-        <div className="absolute w-full top-14 h-96 overflow-y-scroll bg-white shadow-lg rounded-lg  z-50 justify-center items-center space-y-4 p-4">
+        <div
+          className="absolute w-full top-14 h-96 overflow-y-scroll bg-white shadow-lg rounded-lg  z-50 justify-center items-center space-y-4 p-4"
+          ref={searchResultsRef}
+        >
           {searchResults.map(({ id, description, name, lastUpdated, type }) => (
             <div key={id} className="flex w-full justify-center items-center">
               <AssetCard

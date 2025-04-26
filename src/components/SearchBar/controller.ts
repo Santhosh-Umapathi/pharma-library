@@ -1,12 +1,14 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import debounce from "lodash.debounce";
 import { postSearchAssets } from "@/api/search.api";
 import { useLibraryStore } from "@/store";
 
 export const useController = () => {
   const [searchText, setSearchText] = useState("");
-
   const searchResults = useLibraryStore((state) => state.searchResults);
+  const searchResultsRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const isClearIconVisible = searchText.length > 0;
 
   // Clear search results from the store
   const clearStoreSearchResults = () => {
@@ -55,7 +57,28 @@ export const useController = () => {
     debouncedSearch(value);
   };
 
-  const isClearIconVisible = searchText.length > 0;
+  // Handle click outside of the search results and input
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        searchResultsRef.current &&
+        !searchResultsRef.current.contains(event.target as Node) &&
+        searchInputRef.current &&
+        !searchInputRef.current.contains(event.target as Node)
+      ) {
+        // Clear search results if clicked outside
+        clearStoreSearchResults();
+      }
+    };
+
+    // Add event listener
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Clean up
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return {
     searchText,
@@ -63,5 +86,7 @@ export const useController = () => {
     clearSearch,
     isClearIconVisible,
     searchResults,
+    searchResultsRef,
+    searchInputRef,
   };
 };

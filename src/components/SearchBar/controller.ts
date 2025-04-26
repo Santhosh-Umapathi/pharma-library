@@ -22,7 +22,8 @@ export const useController = () => {
   // Clear search input
   const clearSearch = () => {
     setSearchText("");
-
+    searchInputRef.current?.blur();
+    setIsInputFocused(false);
     // Clear stored search results
     clearStoreSearchResults();
   };
@@ -96,7 +97,7 @@ export const useController = () => {
   // Hide Recent Searches when input is blurred
   const onBlur = () => {
     // Slight delay to allow click events to register
-    setTimeout(() => setIsInputFocused(false), 500);
+    setTimeout(() => setIsInputFocused(false), 300);
   };
 
   // Handle input change
@@ -125,6 +126,12 @@ export const useController = () => {
   // Handle click on recent search
   const recentSearchClick = (search: string) => {
     setSearchText(search);
+
+    // Delayed focus to complete blur event trigger to complete
+    setTimeout(() => {
+      searchInputRef.current?.focus();
+      setIsInputFocused(true);
+    }, 300);
   };
 
   // Handle click outside of the search results and input

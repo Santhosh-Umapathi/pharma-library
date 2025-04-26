@@ -1,4 +1,9 @@
 import { AssetSection } from "@/components/AssetsSection";
-import { TProps } from "./types";
+import { ShowMore } from "@/components/ShowMore";
 
-export const FeatureTab = (props: TProps) => <AssetSection {...props} />;
+export const FeatureTab = () => (
+  <>
+    <AssetSection />
+    <ShowMore />
+  </>
+);

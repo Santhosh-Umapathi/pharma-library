@@ -7,11 +7,11 @@ export type TProps = {
   trending: TTrending;
 };
 
-export type TTabComponentProps = {
+export type TController = {
   featured: TProps["featured"];
   trending: TProps["trending"];
 };
 
 export type TTabComponents = {
-  [key in TSelectedTab]: (props: TTabComponentProps) => React.ReactNode;
+  [key in TSelectedTab]: React.ReactNode;
 };

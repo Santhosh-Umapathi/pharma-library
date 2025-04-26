@@ -11,20 +11,23 @@ import { TProps, TTabComponents } from "./types";
 
 // Available tab components
 const TAB_COMPONENTS: TTabComponents = {
-  featured: (props) => <FeatureTab {...props} />,
-  kpi: () => <KpiTab />,
-  layouts: () => <LayoutsTab />,
-  storyboards: () => <StoryBoardsTab />,
+  featured: <FeatureTab />,
+  kpi: <KpiTab />,
+  layouts: <LayoutsTab />,
+  storyboards: <StoryBoardsTab />,
 };
 
 // Render the component based on the selected tab
-export const TabComponent = (props: TProps) => {
-  const { selectedTab } = useController();
+export const TabComponent = ({ featured, trending }: TProps) => {
+  const { selectedTab } = useController({
+    featured,
+    trending,
+  });
 
   // Guard clause to ensure selectedTab is valid
   if (!TAB_COMPONENTS[selectedTab]) {
     return <WorkInProgress />; // or a fallback component
   }
 
-  return TAB_COMPONENTS[selectedTab](props);
+  return TAB_COMPONENTS[selectedTab];
 };

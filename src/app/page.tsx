@@ -6,7 +6,7 @@ import { t } from "@/localization";
 import { controller } from "./controller";
 
 const Home = async () => {
-  const data = await controller();
+  const { featured, trending } = await controller();
 
   return (
     <div className="flex bg-bgPrimary w-screen flex-col items-center px-60 py-10">
@@ -16,7 +16,7 @@ const Home = async () => {
       />
       <SearchBar />
       <TopTabs />
-      <TabComponent {...data} />
+      <TabComponent {...{ featured, trending }} />
     </div>
   );
 };

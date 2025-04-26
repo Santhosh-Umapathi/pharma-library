@@ -1,17 +1,27 @@
 import { t } from "@/localization";
 import { AssetSectionHeader } from "../AssetSectionHeader";
 import { AssetCards } from "../AssetCards";
-import { TProps } from "./types";
+import { useController } from "./controller";
 
-export const AssetSection = (props: TProps) => {
-  return t.assetSections.map(({ title, description, id }) => (
-    <div
-      id={`asset-section-${id}`}
-      key={id}
-      className="flex flex-col w-full mt-16"
-    >
-      <AssetSectionHeader {...{ title, description }} />
-      <AssetCards id={id} {...props} />
-    </div>
-  ));
+export const AssetSection = () => {
+  const { moreAssets } = useController();
+
+  return t.assetSections.map(({ title, description, id }) => {
+    // Render More Assets only when there are assets to show
+    if (id === "moreAssets" && !moreAssets.length) {
+      return null;
+    }
+
+    // Render Sections - Featured | Trending | More Assets
+    return (
+      <div
+        id={`asset-section-${id}`}
+        key={id}
+        className="flex flex-col w-full mt-16"
+      >
+        <AssetSectionHeader {...{ title, description }} />
+        <AssetCards id={id} />
+      </div>
+    );
+  });
 };

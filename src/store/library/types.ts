@@ -2,11 +2,18 @@
 // State Types
 //------------------------------------------------------------------
 
+import { TFeatured } from "@/types/featured";
+import { TMoreAssets } from "@/types/moreAssets";
+import { TTrending } from "@/types/trending";
+
 export type TSelectedTab = "featured" | "kpi" | "layouts" | "storyboards";
 
 export type TState = {
   selectedTab: TSelectedTab;
   showMoreAssets: boolean;
+  featured: TFeatured;
+  trending: TTrending;
+  moreAssets: TMoreAssets;
 };
 
 //------------------------------------------------------------------
@@ -30,6 +37,9 @@ export type TGet = () => TLibraryStore;
 export type TActions = {
   setSelectedTab: (tab: TSelectedTab) => void;
   setShowMoreAssets: (showMore: boolean) => void;
+  setFeatured: (featured: TFeatured) => void;
+  setTrending: (trending: TTrending) => void;
+  setMoreAssets: (moreAssets: TMoreAssets) => void;
 };
 
 //------------------------------------------------------------------

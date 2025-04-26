@@ -4,4 +4,7 @@ export const actions = (set: TSet) =>
   ({
     setSelectedTab: (tab) => set(() => ({ selectedTab: tab })),
     setShowMoreAssets: (showMore) => set(() => ({ showMoreAssets: showMore })),
+    setFeatured: (featured) => set(() => ({ featured })),
+    setTrending: (trending) => set(() => ({ trending })),
+    setMoreAssets: (moreAssets) => set(() => ({ moreAssets })),
   } as TActions);

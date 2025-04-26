@@ -35,9 +35,17 @@ export const en = {
       title: "Trending",
       description: "Most popular by community",
     },
+    {
+      id: "moreAssets",
+      title: "More Assets",
+      description: "Explore more assets",
+    },
   ],
   workInProgress: {
     title: "Work in Progress",
     description: "This section is under construction.",
+  },
+  showMore: {
+    buttonText: "Show More",
   },
 };

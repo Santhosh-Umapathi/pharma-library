@@ -49,4 +49,7 @@ export const en = {
     buttonText: "Show More",
     notSeeing: "Didn't find what you are looking for? Try searching for it.",
   },
+  requestButton: {
+    buttonText: "Request",
+  },
 };

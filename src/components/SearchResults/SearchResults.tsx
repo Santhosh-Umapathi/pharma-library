@@ -14,9 +14,14 @@ export const SearchResults = ({ searchResultsRef }: TProps) => {
     <div
       className="absolute w-full top-14 h-96 overflow-y-scroll bg-white shadow-lg rounded-lg  z-50 justify-center items-center space-y-4 p-4"
       ref={searchResultsRef}
+      id="search-results"
     >
       {searchResults.map(({ id, description, name, lastUpdated, type }) => (
-        <div key={id} className="flex w-full justify-center items-center">
+        <div
+          key={id}
+          className="flex w-full justify-center items-center"
+          id={`search-result-${id}`}
+        >
           <AssetCard
             {...{
               id,

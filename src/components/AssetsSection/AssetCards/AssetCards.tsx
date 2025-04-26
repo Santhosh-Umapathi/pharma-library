@@ -6,7 +6,10 @@ export const AssetCards = ({ id }: TProps) => {
   const { assetCards } = useController({ id });
 
   return (
-    <div className="flex flex-wrap w-full gap-4 justify-between">
+    <div
+      className="flex flex-wrap w-full gap-4 justify-between"
+      id={`asset-cards-${id}`}
+    >
       {assetCards.map(
         ({ id, description, name, type, lastUpdated, isFeatured }) => (
           <AssetCard

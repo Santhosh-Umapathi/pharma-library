@@ -5,7 +5,10 @@ export const ShowMore = () => {
   const { handleShowMore, showMore, scrollToTop } = useController();
 
   return (
-    <div className="flex flex-col items-center justify-center w-full p-8 mt-10">
+    <div
+      className="flex flex-col items-center justify-center w-full p-8 mt-10"
+      id="show-more"
+    >
       {!showMore ? (
         // Show the button if showMore is false
         <button

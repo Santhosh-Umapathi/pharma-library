@@ -26,6 +26,7 @@ export const SearchBar = () => {
     >
       <SearchIcon className="absolute left-4 text-grey-800" />
       <input
+        id="search-input"
         type="text"
         placeholder={t.search.placeholder}
         onFocus={onFocus}

@@ -13,6 +13,7 @@ export const SearchBar = () => {
     searchResults,
     searchResultsRef,
     searchInputRef,
+    onFocus,
   } = useController();
   return (
     <div
@@ -23,6 +24,7 @@ export const SearchBar = () => {
       <input
         type="text"
         placeholder={t.search.placeholder}
+        onFocus={onFocus}
         className="w-full p-2 rounded-lg border-2 border-bgSecondary bg-white focus:outline-none hover:border-buttonPrimary focus:border-buttonPrimary transition-colors duration-200 px-10 text-grey-800 placeholder:text-grey-500"
         value={searchText}
         onChange={onChange}

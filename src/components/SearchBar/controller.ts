@@ -57,6 +57,14 @@ export const useController = () => {
     debouncedSearch(value);
   };
 
+  // Refetch data on focus if search text is not empty
+  const onFocus = () => {
+    if (searchText.length > 0) {
+      // If search text is not empty, fetch results
+      debouncedSearch(searchText);
+    }
+  };
+
   // Handle click outside of the search results and input
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -88,5 +96,6 @@ export const useController = () => {
     searchResults,
     searchResultsRef,
     searchInputRef,
+    onFocus,
   };
 };

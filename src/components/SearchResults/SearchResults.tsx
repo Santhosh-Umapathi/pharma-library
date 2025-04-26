@@ -3,10 +3,10 @@ import { useController } from "./controller";
 import { TProps } from "./types";
 
 export const SearchResults = ({ searchResultsRef }: TProps) => {
-  const { searchResults } = useController();
+  const { searchResults, isSearchResultsEmpty } = useController();
 
   // If there are no search results, return null
-  if (searchResults.length === 0) {
+  if (isSearchResultsEmpty) {
     return null;
   }
 

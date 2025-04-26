@@ -3,11 +3,10 @@ import { SearchBar } from "@/components/SearchBar";
 import { TabComponent } from "@/components/Tabs/TabComponent";
 import { TopTabs } from "@/components/Tabs/TopTabs";
 import { t } from "@/localization";
-import { useLibraryStore } from "@/store";
+import { controller } from "./controller";
 
 const Home = async () => {
-  const setInitialData = useLibraryStore.getState().setInitialData;
-  setInitialData();
+  const data = await controller();
 
   return (
     <div className="flex bg-bgPrimary w-screen flex-col items-center px-60 py-10">
@@ -17,7 +16,7 @@ const Home = async () => {
       />
       <SearchBar />
       <TopTabs />
-      <TabComponent />
+      <TabComponent {...data} />
     </div>
   );
 };

@@ -2,13 +2,6 @@ import { TFeatured } from "@/types/featured";
 import { TTrending } from "@/types/trending";
 
 export type TProps = {
-  id: string;
   featured: TFeatured;
   trending: TTrending;
-};
-
-export type TController = {
-  id: TProps["id"];
-  featured: TProps["featured"];
-  trending: TProps["trending"];
 };

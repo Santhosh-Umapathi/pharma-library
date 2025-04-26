@@ -2,8 +2,8 @@ import { AssetCard } from "../AssetCard";
 import { useController } from "./controller";
 import { TProps } from "./types";
 
-export const AssetCards = ({ id }: TProps) => {
-  const { assetCards } = useController({ id });
+export const AssetCards = ({ id, featured, trending }: TProps) => {
+  const { assetCards } = useController({ id, featured, trending });
 
   return (
     <div className="flex flex-wrap w-full gap-4 justify-between">

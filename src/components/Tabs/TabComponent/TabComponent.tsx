@@ -6,19 +6,19 @@ import {
   StoryBoardsTab,
 } from "@/components/Tabs";
 import { useController } from "./controller";
-import { TSelectedTab } from "@/store/library/types";
 import { WorkInProgress } from "@/components/WorkInProgress";
+import { TProps, TTabComponents } from "./types";
 
 // Available tab components
-const TAB_COMPONENTS: { [key in TSelectedTab]: React.ReactNode } = {
-  featured: <FeatureTab />,
-  kpi: <KpiTab />,
-  layouts: <LayoutsTab />,
-  storyboards: <StoryBoardsTab />,
+const TAB_COMPONENTS: TTabComponents = {
+  featured: (props) => <FeatureTab {...props} />,
+  kpi: () => <KpiTab />,
+  layouts: () => <LayoutsTab />,
+  storyboards: () => <StoryBoardsTab />,
 };
 
 // Render the component based on the selected tab
-export const TabComponent = () => {
+export const TabComponent = (props: TProps) => {
   const { selectedTab } = useController();
 
   // Guard clause to ensure selectedTab is valid
@@ -26,5 +26,5 @@ export const TabComponent = () => {
     return <WorkInProgress />; // or a fallback component
   }
 
-  return TAB_COMPONENTS[selectedTab];
+  return TAB_COMPONENTS[selectedTab](props);
 };

@@ -1,13 +1,8 @@
-import { useLibraryStore } from "@/store";
 import { TController } from "./types";
-import { TFeatured } from "@/types/featured";
-import { TTrending } from "@/types/trending";
-import { state } from "@/store/library/state";
 
-export const useController = ({ id }: TController) => {
-  const assetCards = useLibraryStore.getState()[id as keyof typeof state] as
-    | TFeatured
-    | TTrending;
+export const useController = ({ id, featured, trending }: TController) => {
+  // Render AssetCards based on the section - "Featured" or "Trending"
+  const assetCards = id === "featured" ? featured : trending;
 
   return { assetCards };
 };

@@ -36,4 +36,8 @@ export const en = {
       description: "Most popular by community",
     },
   ],
+  workInProgress: {
+    title: "Work in Progress",
+    description: "This section is under construction.",
+  },
 };

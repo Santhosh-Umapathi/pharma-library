@@ -2,15 +2,10 @@
 // State Types
 //------------------------------------------------------------------
 
-import { TFeatured } from "@/types/featured";
-import { TTrending } from "@/types/trending";
-
 export type TSelectedTab = "featured" | "kpi" | "layouts" | "storyboards";
 
 export type TState = {
   selectedTab: TSelectedTab;
-  featured: TFeatured;
-  trending: TTrending;
 };
 
 //------------------------------------------------------------------
@@ -33,7 +28,6 @@ export type TGet = () => TLibraryStore;
 
 export type TActions = {
   setSelectedTab: (tab: TSelectedTab) => void;
-  setInitialData: () => void;
 };
 
 //------------------------------------------------------------------

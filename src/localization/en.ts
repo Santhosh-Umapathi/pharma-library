@@ -47,5 +47,6 @@ export const en = {
   },
   showMore: {
     buttonText: "Show More",
+    notSeeing: "Didn't find what you are looking for? Try searching for it.",
   },
 };

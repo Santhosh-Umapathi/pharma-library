@@ -1,8 +1,8 @@
 import { HeaderSection } from "@/components/HeaderSection";
 import { SearchBar } from "@/components/SearchBar";
+import { TabComponent } from "@/components/Tabs/TabComponent";
 import { TopTabs } from "@/components/Tabs/TopTabs";
 import { t } from "@/localization";
-import { AssetSection } from "@/components/AssetsSection";
 import { useLibraryStore } from "@/store";
 
 const Home = async () => {
@@ -17,7 +17,7 @@ const Home = async () => {
       />
       <SearchBar />
       <TopTabs />
-      <AssetSection />
+      <TabComponent />
     </div>
   );
 };

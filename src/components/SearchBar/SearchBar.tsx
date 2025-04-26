@@ -2,7 +2,9 @@
 import { t } from "@/localization";
 import { useController } from "./controller";
 import { CloseIcon, SearchIcon } from "@/components/icons";
-import { AssetCard } from "../AssetsSection";
+
+import { RecentSearch } from "../RecentSearch";
+import { SearchResults } from "../SearchResults";
 
 export const SearchBar = () => {
   const {
@@ -10,10 +12,12 @@ export const SearchBar = () => {
     onChange,
     clearSearch,
     isClearIconVisible,
-    searchResults,
     searchResultsRef,
     searchInputRef,
     onFocus,
+    onBlur,
+    recentSearchClick,
+    showRecentSearches,
   } = useController();
   return (
     <div
@@ -25,6 +29,7 @@ export const SearchBar = () => {
         type="text"
         placeholder={t.search.placeholder}
         onFocus={onFocus}
+        onBlur={onBlur}
         className="w-full p-2 rounded-lg border-2 border-bgSecondary bg-white focus:outline-none hover:border-buttonPrimary focus:border-buttonPrimary transition-colors duration-200 px-10 text-grey-800 placeholder:text-grey-500"
         value={searchText}
         onChange={onChange}
@@ -36,28 +41,10 @@ export const SearchBar = () => {
         }`}
         onClick={clearSearch}
       />
+      {/* Display recent searches */}
+      {showRecentSearches && <RecentSearch {...{ recentSearchClick }} />}
       {/* Display search results */}
-      {searchResults.length > 0 && (
-        <div
-          className="absolute w-full top-14 h-96 overflow-y-scroll bg-white shadow-lg rounded-lg  z-50 justify-center items-center space-y-4 p-4"
-          ref={searchResultsRef}
-        >
-          {searchResults.map(({ id, description, name, lastUpdated, type }) => (
-            <div key={id} className="flex w-full justify-center items-center">
-              <AssetCard
-                {...{
-                  id,
-                  icon: type,
-                  title: name,
-                  description,
-                  date: lastUpdated,
-                  showBg: true,
-                }}
-              />
-            </div>
-          ))}
-        </div>
-      )}
+      <SearchResults searchResultsRef={searchResultsRef} />
     </div>
   );
 };

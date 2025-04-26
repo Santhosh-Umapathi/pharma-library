@@ -5,10 +5,13 @@ import { useLibraryStore } from "@/store";
 
 export const useController = () => {
   const [searchText, setSearchText] = useState("");
-  const searchResults = useLibraryStore((state) => state.searchResults);
+  const [isInputFocused, setIsInputFocused] = useState(false);
   const searchResultsRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const isClearIconVisible = searchText.length > 0;
+
+  //Show/Hide recent searches dropdown
+  const showRecentSearches = !!(searchText.length < 1 && isInputFocused);
 
   // Clear search results from the store
   const clearStoreSearchResults = useCallback(() => {
@@ -87,6 +90,13 @@ export const useController = () => {
       // If search text is not empty, fetch results
       debouncedSearch(searchText);
     }
+    setIsInputFocused(true);
+  };
+
+  // Hide Recent Searches when input is blurred
+  const onBlur = () => {
+    // Slight delay to allow click events to register
+    setTimeout(() => setIsInputFocused(false), 500);
   };
 
   // Handle input change
@@ -112,6 +122,11 @@ export const useController = () => {
     [clearStoreSearchResults]
   );
 
+  // Handle click on recent search
+  const recentSearchClick = (search: string) => {
+    setSearchText(search);
+  };
+
   // Handle click outside of the search results and input
   useEffect(() => {
     // Add event listener
@@ -128,9 +143,11 @@ export const useController = () => {
     onChange,
     clearSearch,
     isClearIconVisible,
-    searchResults,
     searchResultsRef,
     searchInputRef,
     onFocus,
+    recentSearchClick,
+    showRecentSearches,
+    onBlur,
   };
 };

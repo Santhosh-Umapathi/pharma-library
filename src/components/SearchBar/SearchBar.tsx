@@ -2,10 +2,16 @@
 import { t } from "@/localization";
 import { useController } from "./controller";
 import { CloseIcon, SearchIcon } from "@/components/icons";
+import { AssetCard } from "../AssetsSection";
 
 export const SearchBar = () => {
-  const { searchText, onChange, clearSearch, isClearIconVisible } =
-    useController();
+  const {
+    searchText,
+    onChange,
+    clearSearch,
+    isClearIconVisible,
+    searchResults,
+  } = useController();
   return (
     <div
       id="search-bar"
@@ -25,6 +31,25 @@ export const SearchBar = () => {
         }`}
         onClick={clearSearch}
       />
+      {/* Display search results */}
+      {searchResults.length > 0 && (
+        <div className="absolute w-full top-14 h-96 overflow-y-scroll bg-white shadow-lg rounded-lg  z-50 justify-center items-center space-y-4 p-4">
+          {searchResults.map(({ id, description, name, lastUpdated, type }) => (
+            <div key={id} className="flex w-full justify-center items-center">
+              <AssetCard
+                {...{
+                  id,
+                  icon: type,
+                  title: name,
+                  description,
+                  date: lastUpdated,
+                  showBg: true,
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

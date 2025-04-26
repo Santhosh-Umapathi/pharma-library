@@ -4,6 +4,7 @@
 
 import { TFeatured } from "@/types/featured";
 import { TMoreAssets } from "@/types/moreAssets";
+import { TSearch } from "@/types/search";
 import { TTrending } from "@/types/trending";
 
 export type TSelectedTab = "featured" | "kpi" | "layouts" | "storyboards";
@@ -14,6 +15,7 @@ export type TState = {
   featured: TFeatured;
   trending: TTrending;
   moreAssets: TMoreAssets;
+  searchResults: TSearch;
 };
 
 //------------------------------------------------------------------
@@ -40,6 +42,7 @@ export type TActions = {
   setFeatured: (featured: TFeatured) => void;
   setTrending: (trending: TTrending) => void;
   setMoreAssets: (moreAssets: TMoreAssets) => void;
+  setSearchResults: (searchResults: TSearch) => void;
 };
 
 //------------------------------------------------------------------

@@ -7,4 +7,5 @@ export const actions = (set: TSet) =>
     setFeatured: (featured) => set(() => ({ featured })),
     setTrending: (trending) => set(() => ({ trending })),
     setMoreAssets: (moreAssets) => set(() => ({ moreAssets })),
+    setSearchResults: (searchResults) => set(() => ({ searchResults })),
   } as TActions);

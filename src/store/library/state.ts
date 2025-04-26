@@ -6,4 +6,5 @@ export const state: TState = {
   featured: [],
   trending: [],
   moreAssets: [],
+  searchResults: [],
 };

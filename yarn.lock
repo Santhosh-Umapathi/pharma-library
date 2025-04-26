@@ -684,6 +684,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash.debounce@npm:^4.0.9":
+  version: 4.0.9
+  resolution: "@types/lodash.debounce@npm:4.0.9"
+  dependencies:
+    "@types/lodash": "*"
+  checksum: 8183a152e01928e3b97ca773f6ae6038b8695e76493ba8bf6b743ec143948a62294fbc9d49fa4a78b52265b3ba4892ef57534e0c13d04aa0f111671b5a944feb
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*":
+  version: 4.17.16
+  resolution: "@types/lodash@npm:4.17.16"
+  checksum: 915618c5735b10007e0ed7d06fdce6b344f88fc721d492b189a69064bfd046d2382e1ba61d683eeb61cad60ca0286cd110e6fe0fa4ab2e99066a40478376831d
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^20":
   version: 20.17.31
   resolution: "@types/node@npm:20.17.31"
@@ -3033,6 +3049,7 @@ __metadata:
   dependencies:
     "@eslint/eslintrc": ^3
     "@tailwindcss/postcss": ^4
+    "@types/lodash.debounce": ^4.0.9
     "@types/node": ^20
     "@types/react": ^19
     "@types/react-dom": ^19

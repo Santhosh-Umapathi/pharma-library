@@ -23,7 +23,7 @@ All the questions/assumptions from the provided pdf with high level requirements
 
 4. Yes, it will show a button at the bottom of the new section - "Not seeing, try search"
 
-   1. Yes, Scroll to the top of the page and focus on the search bar ?
+   1. Yes, Scroll to the top of the page. No focus on the search bar.
 
 ## 2. Explore Asset
 
@@ -124,5 +124,5 @@ All the questions/assumptions from the provided pdf with high level requirements
 
 ### Assumptions
 
-1. 3 chars min
+1. Yes, 3 chars min
 2. yes

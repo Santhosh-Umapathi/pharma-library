@@ -1,6 +1,6 @@
 # Prerequisites Checklist
 
-Checklist of features that are required to be implemented before starting the development.
+Checklist of features that are required to be implemented as pre-requisites.
 
 | Feature                                                       | Status |
 | ------------------------------------------------------------- | ------ |

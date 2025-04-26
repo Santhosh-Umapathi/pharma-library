@@ -16,6 +16,7 @@ export type TState = {
   trending: TTrending;
   moreAssets: TMoreAssets;
   searchResults: TSearch;
+  showRequestModal: boolean;
 };
 
 //------------------------------------------------------------------
@@ -43,6 +44,7 @@ export type TActions = {
   setTrending: (trending: TTrending) => void;
   setMoreAssets: (moreAssets: TMoreAssets) => void;
   setSearchResults: (searchResults: TSearch) => void;
+  setShowRequestModal: (showRequestModal: boolean) => void;
 };
 
 //------------------------------------------------------------------

@@ -8,4 +8,6 @@ export const actions = (set: TSet) =>
     setTrending: (trending) => set(() => ({ trending })),
     setMoreAssets: (moreAssets) => set(() => ({ moreAssets })),
     setSearchResults: (searchResults) => set(() => ({ searchResults })),
+    setShowRequestModal: (showRequestModal) =>
+      set(() => ({ showRequestModal })),
   } as TActions);

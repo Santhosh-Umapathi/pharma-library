@@ -1,8 +1,8 @@
+import { useLibraryStore } from "@/store";
+
 export const useController = () => {
   const onClick = () => {
-    // Handle button click
-    console.log("Button clicked!");
-    // Add your logic here
+    useLibraryStore.getState().setShowRequestModal(true);
   };
   return { onClick };
 };

@@ -7,4 +7,5 @@ export const state: TState = {
   trending: [],
   moreAssets: [],
   searchResults: [],
+  showRequestModal: false,
 };

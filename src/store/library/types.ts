@@ -6,6 +6,7 @@ export type TSelectedTab = "featured" | "kpi" | "layouts" | "storyboards";
 
 export type TState = {
   selectedTab: TSelectedTab;
+  showMoreAssets: boolean;
 };
 
 //------------------------------------------------------------------
@@ -28,6 +29,7 @@ export type TGet = () => TLibraryStore;
 
 export type TActions = {
   setSelectedTab: (tab: TSelectedTab) => void;
+  setShowMoreAssets: (showMore: boolean) => void;
 };
 
 //------------------------------------------------------------------

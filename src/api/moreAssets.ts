@@ -1,7 +1,7 @@
 import data from "@/database/assets.json";
 import { TMoreAssets } from "@/types/moreAssets";
 
-// Mock API to get only featured items
+// Mock API to get only more items which are not featured or trending
 export const getMoreAssets = async () => {
   const allMoreAssets = data.filter(
     (item) => !item.isFeatured && !item.isTrending

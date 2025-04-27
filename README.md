@@ -1,6 +1,7 @@
 # Pharma Labs
 
-Live - https://pharma-labs.vercel.app/
+- Live - https://pharma-labs.vercel.app/
+- [Code Sandbox](https://codesandbox.io/p/github/Santhosh-Umapathi/pharma-library/main?import=true)
 
 A simple Next.js Project to explore assets and search for assets from the library.
 

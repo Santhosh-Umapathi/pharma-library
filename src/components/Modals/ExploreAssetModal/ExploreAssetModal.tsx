@@ -13,7 +13,10 @@ export const ExploreAssetModal = () => {
   const { asset, title, showTags, showMetrics } = useController();
 
   return (
-    <div className="flex flex-col gap-4 w-full p-4 items-center">
+    <div
+      className="flex flex-col gap-4 w-full p-4 h-full overflow-y-scroll items-center"
+      id="explore-asset-modal"
+    >
       <div className="flex justify-center items-center p-8 bg-bgSecondary rounded-lg">
         {ICONS[asset?.data.type as keyof typeof ICONS]}
       </div>

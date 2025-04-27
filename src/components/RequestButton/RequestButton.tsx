@@ -30,6 +30,7 @@ export const RequestButton = () => {
           footerButtonText,
           showModal: showRequestModal,
           className: "items-center!",
+          title: t.requestForm.title,
         }}
       >
         <RequestModal />

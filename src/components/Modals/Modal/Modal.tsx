@@ -12,6 +12,7 @@ export const Modal = ({
   className,
   footerButtonClassName,
   footerButtonIcon = false,
+  title,
 }: TProps) => {
   useController({ showModal });
 
@@ -25,6 +26,11 @@ export const Modal = ({
     >
       {/* Modal inside BG Overlay */}
       <div className="flex flex-col items-center w-2/3 bg-white shadow-lg rounded-lg p-4 relative">
+        {title && (
+          <span className="text-2xl font-bold text-center w-full mb-8">
+            {title}
+          </span>
+        )}
         {/* Close Icon */}
         <div className="flex absolute top-4 right-4 items-center justify-center">
           {showLink && (

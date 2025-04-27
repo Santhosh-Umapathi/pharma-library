@@ -60,6 +60,7 @@ export const en = {
       reason: "Reason",
     },
     submit: "Submit",
+    title: "Request an Asset",
   },
   assetModal: {
     footerButtonText: "Favorite",

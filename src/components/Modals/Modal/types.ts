@@ -8,6 +8,7 @@ export type TProps = {
   showLink?: boolean;
   className?: string;
   footerButtonIcon?: boolean;
+  title?: string;
 };
 
 export type TController = {

@@ -1,6 +1,7 @@
 import { useLibraryStore } from "@/store";
 import { TController } from "./types";
 import { getAsset } from "@/api/asset.api";
+import { formatDate } from "@/helpers/data";
 
 export const useController = ({ date, id }: TController) => {
   const onClick = async () => {
@@ -21,13 +22,7 @@ export const useController = ({ date, id }: TController) => {
   };
 
   // Format the date to a more readable format
-  const dateText = date
-    ? new Date(date).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-      })
-    : "";
+  const dateText = date ? formatDate(date) : "";
 
   return {
     dateText,

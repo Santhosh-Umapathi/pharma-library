@@ -63,5 +63,6 @@ export const en = {
   },
   assetModal: {
     footerButtonText: "Favorite",
+    businessQuestions: "Business Questions",
   },
 };

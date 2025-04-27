@@ -1,4 +1,4 @@
-import { CloseIcon } from "@/components/icons";
+import { CloseIcon, LinkIcon } from "@/components/icons";
 import { TProps } from "./types";
 import { useController } from "./controller";
 
@@ -8,6 +8,7 @@ export const Modal = ({
   closeModal,
   footerButtonHandler,
   footerButtonText,
+  showLink = false,
 }: TProps) => {
   useController({ showModal });
 
@@ -20,7 +21,10 @@ export const Modal = ({
       {/* Modal inside BG Overlay */}
       <div className="flex flex-col justify-center items-center w-2/3 h-2/3 bg-white shadow-lg rounded-lg p-4 relative">
         {/* Close Icon */}
-        <div className="flex absolute top-4 right-4">
+        <div className="flex absolute top-4 right-4 items-center justify-center">
+          {showLink && (
+            <LinkIcon className="w-5 h-5 cursor-pointer hover:opacity-70 transition-opacity duration-300 mr-2" />
+          )}
           <CloseIcon
             className="w-6 h-6 cursor-pointer hover:opacity-70 transition-opacity duration-300"
             onClick={closeModal}

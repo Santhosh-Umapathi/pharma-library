@@ -4,6 +4,7 @@ export type TProps = {
   closeModal: () => void;
   footerButtonHandler: () => void;
   footerButtonText: string;
+  showLink?: boolean;
 };
 
 export type TController = {

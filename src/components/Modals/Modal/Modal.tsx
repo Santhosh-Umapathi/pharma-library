@@ -9,7 +9,8 @@ export const Modal = ({
   footerButtonHandler,
   footerButtonText,
   showLink = false,
-  className = "",
+  className,
+  footerButtonClassName,
 }: TProps) => {
   useController({ showModal });
 
@@ -38,7 +39,7 @@ export const Modal = ({
           {children}
           {/* Footer */}
           <button
-            className="bg-buttonSecondary text-white p-4 rounded-lg hover:opacity-70 transition-opacity duration-300 cursor-pointer w-60"
+            className={`bg-buttonSecondary text-white p-4 rounded-lg hover:opacity-70 transition-opacity duration-300 cursor-pointer w-60 ${footerButtonClassName}`}
             type="button"
             onClick={footerButtonHandler}
           >

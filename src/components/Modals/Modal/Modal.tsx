@@ -47,7 +47,10 @@ export const Modal = ({
           {children}
           {/* Footer */}
           <button
-            className={`bg-buttonSecondary text-white p-4 rounded-lg hover:opacity-70 transition-opacity duration-300 cursor-pointer w-60 ${footerButtonClassName}`}
+            className={`bg-buttonSecondary text-white 
+              p-3 w-40
+              lg:p-4 lg:w-60
+              rounded-lg hover:opacity-70 transition-opacity duration-300 cursor-pointer ${footerButtonClassName}`}
             type="button"
             onClick={footerButtonHandler}
           >

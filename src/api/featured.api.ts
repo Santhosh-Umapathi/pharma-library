@@ -1,4 +1,4 @@
-import data from "@/database/assets.json";
+import { data } from "@/database";
 import { TFeatured } from "@/types/featured";
 
 // Mock API to get only featured items

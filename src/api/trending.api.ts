@@ -1,4 +1,4 @@
-import data from "@/database/assets.json";
+import { data } from "@/database";
 import { TTrending } from "@/types/trending";
 
 // Mock API to get only trending items

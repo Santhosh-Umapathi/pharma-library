@@ -1,4 +1,4 @@
-import data from "@/database/assets.json";
+import { data } from "@/database";
 import { TMoreAssets } from "@/types/moreAssets";
 
 // Mock API to get only more items which are not featured or trending

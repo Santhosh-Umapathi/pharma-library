@@ -1,4 +1,4 @@
-import data from "@/database/assets.json";
+import { data } from "@/database";
 import { TAsset } from "@/types/assets";
 
 // Mock API to get only requested item

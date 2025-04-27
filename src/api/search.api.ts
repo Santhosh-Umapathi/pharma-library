@@ -1,4 +1,4 @@
-import data from "@/database/assets.json";
+import { data } from "@/database";
 
 // Mock API to get only searched items
 export const postSearchAssets = async (searchText: string) => {

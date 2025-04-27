@@ -14,7 +14,7 @@ export const ExploreAssetModal = () => {
 
   return (
     <div
-      className="flex flex-col gap-4 w-full p-4 h-full overflow-y-scroll items-center"
+      className="flex flex-col gap-4 w-full p-4 items-center"
       id="explore-asset-modal"
     >
       <div className="flex justify-center items-center p-8 bg-bgSecondary rounded-lg">

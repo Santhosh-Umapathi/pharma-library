@@ -14,8 +14,8 @@ export const RequestButton = () => {
       <button
         id="request-button"
         className="flex bg-buttonPrimary text-white rounded-lg hover:opacity-70 transition-opacity duration-300 cursor-pointer absolute top-4 right-4 items-center justify-center
-        w-28 p-2 text-xs
-        sm:text-sm
+        w-20 p-2 text-xs
+        sm:w-28 sm:text-sm
         md:w-40 md:p-3 md:text-base
         "
         type="button"

@@ -33,6 +33,8 @@ All the questions/assumptions from the provided pdf with high level requirements
 2. Modal with nice animation?
 3. Modal should have a background overlay?
 4. Modal should close on clicking outside the modal?
+5. Should the business questions be clickable ? if yes, what action should it do ?
+6. Should the link icon copy the asset link ?
 
 ### Assumptions
 
@@ -40,6 +42,8 @@ All the questions/assumptions from the provided pdf with high level requirements
 2. No, for the sake of simplicity, no animation is required.
 3. No
 4. No, for the sake of simplicity, modal can be closed only with close button.
+5. No, currently not enough information, just highlight on hover
+6. No, not in scope
 
 ## 3. Recent searches
 

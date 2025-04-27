@@ -9,7 +9,7 @@ export const useController = ({ id, value, index }: TController) => {
   // Show only for 1st and 3rd metric
   const showInfoIcon = id === "metric-1" || id === "metric-3";
   // Show left border if not the first metric
-  const showRightBorder = index === 0;
+  const hideLeftBorder = index === 0;
 
-  return { formattedValue, showInfoIcon, showRightBorder };
+  return { formattedValue, showInfoIcon, hideLeftBorder };
 };

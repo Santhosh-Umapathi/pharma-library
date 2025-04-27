@@ -82,8 +82,8 @@ export const ExploreAssetModal = () => {
       {showMetrics && (
         <div
           className="flex justify-between items-center w-full
-          mt-4
-          sm:mt-7
+          mt-4 flex-wrap gap-4
+          sm:mt-7 sm:flex-nowrap sm:gap-0
           md:mt-14           
           "
           id="metrics"

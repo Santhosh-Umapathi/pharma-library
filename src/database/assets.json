@@ -68,7 +68,7 @@
   },
   {
     "id": "asset-2",
-    "name": "Item Name",
+    "name": "Item 2",
     "description": "Short description of the item goes nicely here.",
     "type": "layout",
     "isFeatured": true,
@@ -135,7 +135,7 @@
   },
   {
     "id": "asset-3",
-    "name": "Item Name",
+    "name": "Item 3",
     "description": "Short description of the item goes nicely here.",
     "type": "layout",
     "isFeatured": true,
@@ -202,7 +202,7 @@
   },
   {
     "id": "asset-4",
-    "name": "Item Name",
+    "name": "Item 4",
     "description": "Short description of the item goes nicely here.",
     "type": "layout",
     "isFeatured": true,
@@ -269,7 +269,7 @@
   },
   {
     "id": "asset-5",
-    "name": "Item Name",
+    "name": "Item 5",
     "description": "Short description of the item goes nicely here.",
     "type": "layout",
     "isFeatured": false,
@@ -336,7 +336,7 @@
   },
   {
     "id": "asset-6",
-    "name": "Item Name",
+    "name": "Item 6",
     "description": "Short description of the item goes nicely here.",
     "type": "layout",
     "isFeatured": false,
@@ -403,7 +403,7 @@
   },
   {
     "id": "asset-7",
-    "name": "Item Name",
+    "name": "Item 7",
     "description": "Short description of the item goes nicely here.",
     "type": "layout",
     "isFeatured": false,
@@ -470,7 +470,7 @@
   },
   {
     "id": "asset-8",
-    "name": "Item Name",
+    "name": "Item 8",
     "description": "Short description of the item goes nicely here.",
     "type": "layout",
     "isFeatured": false,

@@ -8,14 +8,23 @@ export const useController = ({ date, id }: TController) => {
     const showAssetModal = useLibraryStore.getState().showAssetModal;
 
     if (showAssetModal) return;
-    // Set the asset modal to show
-    useLibraryStore.getState().setShowAssetModal(true);
 
     try {
       // Fetch the asset data
       const results = await getAsset(id);
+
+      //Check if user has access to the asset
+      if (!results.data?.isAuthorized) {
+        window.alert(
+          "You are not authorized to view this asset. Request access !"
+        );
+        return;
+      }
+
       // Set the asset data in the store
       useLibraryStore.getState().setAsset(results.data);
+      // Set the asset modal to show
+      useLibraryStore.getState().setShowAssetModal(true);
     } catch (error) {
       console.log("Request failed:", error);
     }

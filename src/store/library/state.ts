@@ -9,4 +9,5 @@ export const state: TState = {
   searchResults: [],
   showRequestModal: false,
   showAssetModal: false,
+  asset: null,
 };

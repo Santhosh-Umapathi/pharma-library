@@ -2,6 +2,7 @@
 // State Types
 //------------------------------------------------------------------
 
+import { TAsset } from "@/types/assets";
 import { TFeatured } from "@/types/featured";
 import { TMoreAssets } from "@/types/moreAssets";
 import { TSearch } from "@/types/search";
@@ -18,6 +19,7 @@ export type TState = {
   searchResults: TSearch;
   showRequestModal: boolean;
   showAssetModal: boolean;
+  asset: TAsset | null;
 };
 
 //------------------------------------------------------------------
@@ -47,6 +49,7 @@ export type TActions = {
   setSearchResults: (searchResults: TSearch) => void;
   setShowRequestModal: (showRequestModal: boolean) => void;
   setShowAssetModal: (showAssetModal: boolean) => void;
+  setAsset: (asset: TAsset | null) => void;
 };
 
 //------------------------------------------------------------------

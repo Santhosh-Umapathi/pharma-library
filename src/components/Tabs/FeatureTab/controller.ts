@@ -7,9 +7,11 @@ export const useController = () => {
   // Close modal handler
   const closeModal = () => {
     if (!showAssetModal) return;
+    // Close Asset modal
     useLibraryStore.setState({ showAssetModal: false });
 
-    //TODO: clear store for explore asset modal
+    // Reset asset state
+    useLibraryStore.getState().setAsset(null);
   };
 
   const footerButtonText = t.assetModal.footerButtonText;

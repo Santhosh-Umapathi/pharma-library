@@ -11,4 +11,5 @@ export const actions = (set: TSet) =>
     setShowRequestModal: (showRequestModal) =>
       set(() => ({ showRequestModal })),
     setShowAssetModal: (showAssetModal) => set(() => ({ showAssetModal })),
+    setAsset: (asset) => set(() => ({ asset })),
   } as TActions);

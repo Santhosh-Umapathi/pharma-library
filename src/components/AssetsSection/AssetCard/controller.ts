@@ -1,15 +1,23 @@
 import { useLibraryStore } from "@/store";
 import { TController } from "./types";
+import { getAsset } from "@/api/asset.api";
 
 export const useController = ({ date, id }: TController) => {
-  const onClick = () => {
+  const onClick = async () => {
     const showAssetModal = useLibraryStore.getState().showAssetModal;
 
     if (showAssetModal) return;
-    console.log(`Clicked on asset card with ID: ${id}`);
+    // Set the asset modal to show
     useLibraryStore.getState().setShowAssetModal(true);
 
-    //TODO: set the asset data in the store
+    try {
+      // Fetch the asset data
+      const results = await getAsset(id);
+      // Set the asset data in the store
+      useLibraryStore.getState().setAsset(results.data);
+    } catch (error) {
+      console.log("Request failed:", error);
+    }
   };
 
   // Format the date to a more readable format

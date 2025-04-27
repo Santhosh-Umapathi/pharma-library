@@ -52,4 +52,13 @@ export const en = {
   requestButton: {
     buttonText: "Request",
   },
+  requestForm: {
+    placeholder: {
+      username: "Username",
+      email: "Email",
+      assetName: "Asset Name",
+      reason: "Reason",
+    },
+    submit: "Submit",
+  },
 };

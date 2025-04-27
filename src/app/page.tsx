@@ -9,7 +9,7 @@ const Home = async () => {
 
   return (
     <div
-      className="flex bg-bgPrimary w-screen flex-col items-center py-10
+      className="flex bg-bgPrimary w-screen flex-col items-center py-20
     px-10
     sm:px-20
     md:px-32 

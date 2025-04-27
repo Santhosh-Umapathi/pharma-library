@@ -7,7 +7,13 @@ export const RequestModal = () => {
   const { handleRequestFormChange, requestForm, FORM_FIELDS } = useController();
 
   return (
-    <div className="flex flex-col gap-4 w-1/2">
+    <div
+      className="flex flex-col gap-4 
+    w-full
+    sm:w-2/3
+    md:w-1/2
+    "
+    >
       {FORM_FIELDS.map(({ id, placeholder }) => {
         const formId = id as keyof TForm;
         return (

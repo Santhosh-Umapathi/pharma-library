@@ -27,20 +27,20 @@ export const Modal = ({
     >
       {/* Modal inside BG Overlay */}
       <div className="flex flex-col items-center w-2/3 bg-white shadow-lg rounded-lg p-4 relative">
-        {title && (
-          <span className="text-2xl font-bold text-center w-full mb-8">
-            {title}
-          </span>
-        )}
-        {/* Close Icon */}
-        <div className="flex absolute top-4 right-4 items-center justify-center">
-          {showLink && (
-            <LinkIcon className="w-5 h-5 cursor-pointer hover:opacity-70 transition-opacity duration-300 mr-2" />
+        <div id="modal-header" className="flex w-full items-center mb-8">
+          {title && (
+            <span className="text-2xl font-bold text-left w-full">{title}</span>
           )}
-          <CloseIcon
-            className="w-6 h-6 cursor-pointer hover:opacity-70 transition-opacity duration-300"
-            onClick={closeModal}
-          />
+          {/* Close Icon */}
+          <div className="flex items-center justify-end flex-1">
+            {showLink && (
+              <LinkIcon className="w-5 h-5 cursor-pointer hover:opacity-70 transition-opacity duration-300 mr-2" />
+            )}
+            <CloseIcon
+              className="w-6 h-6 cursor-pointer hover:opacity-70 transition-opacity duration-300"
+              onClick={closeModal}
+            />
+          </div>
         </div>
         <div className="flex flex-col gap-12 w-full h-full justify-center items-center">
           {/* Modal Contents */}

@@ -5,6 +5,7 @@ export type TProps = {
   footerButtonHandler: () => void;
   footerButtonText: string;
   showLink?: boolean;
+  className?: string;
 };
 
 export type TController = {

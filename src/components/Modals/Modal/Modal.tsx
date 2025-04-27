@@ -9,6 +9,7 @@ export const Modal = ({
   footerButtonHandler,
   footerButtonText,
   showLink = false,
+  className = "",
 }: TProps) => {
   useController({ showModal });
 
@@ -17,9 +18,11 @@ export const Modal = ({
 
   // Show modal
   return (
-    <div className="flex fixed top-0 left-0 right-0 bottom-0 z-50 justify-center items-center bg-black/10">
+    <div
+      className={`flex fixed top-0 w-full h-full z-50 justify-center items-start bg-black/10 overflow-y-scroll py-20 ${className}`}
+    >
       {/* Modal inside BG Overlay */}
-      <div className="flex flex-col justify-center items-center w-2/3 h-2/3 bg-white shadow-lg rounded-lg p-4 relative">
+      <div className="flex flex-col items-center w-2/3 bg-white shadow-lg rounded-lg p-4 relative">
         {/* Close Icon */}
         <div className="flex absolute top-4 right-4 items-center justify-center">
           {showLink && (

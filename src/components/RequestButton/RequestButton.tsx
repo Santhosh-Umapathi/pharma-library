@@ -29,6 +29,7 @@ export const RequestButton = () => {
           footerButtonHandler: closeModal,
           footerButtonText,
           showModal: showRequestModal,
+          className: "items-center!",
         }}
       >
         <RequestModal />

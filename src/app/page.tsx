@@ -13,7 +13,8 @@ const Home = async () => {
     px-10
     sm:px-20
     md:px-32 
-    lg:px-60 
+    lg:px-40
+    xl:px-60 
     "
     >
       <HeaderSection

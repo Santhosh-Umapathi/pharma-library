@@ -16,7 +16,10 @@ export const AssetSection = () => {
       <div
         id={`asset-section-${id}`}
         key={id}
-        className="flex flex-col w-full mt-16"
+        className="flex flex-col w-full 
+        mt-8
+        md:mt-16
+        "
       >
         <AssetSectionHeader {...{ title, description }} />
         <AssetCards id={id} />

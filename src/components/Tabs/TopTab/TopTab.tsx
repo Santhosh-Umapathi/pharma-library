@@ -9,13 +9,18 @@ export const TopTab = ({ id, label }: TProps) => {
     <div
       id={`top-tab-${id}`}
       key={id}
-      className="flex items-center justify-center w-full p-2 cursor-pointer hover:opacity-70 transition-opacity duration-200"
+      className="flex items-center justify-center w-full cursor-pointer hover:opacity-70 transition-opacity duration-200
+      p-1
+      md:p-2 
+      "
       onClick={setSelectedTab}
     >
       <span
-        className={`text-xl w-full text-center p-2 rounded-lg ${
-          isTabSelected ? "bg-white" : ""
-        }`}
+        className={`w-full text-center ${isTabSelected ? "bg-white" : ""}
+          text-sm p-1 rounded-sm
+          sm:text-lg
+          md:text-xl md:p-2 md:rounded-lg
+        `}
       >
         {label}
       </span>

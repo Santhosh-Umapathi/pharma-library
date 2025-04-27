@@ -11,7 +11,7 @@ export const RecentSearch = ({ recentSearchClick }: TProps) => {
 
   return (
     <div
-      className="absolute w-full top-14 h-48 overflow-y-scroll bg-white shadow-lg rounded-lg  z-50 justify-center items-center space-y-4 p-4"
+      className="absolute w-full top-14 h-48 overflow-y-scroll bg-white shadow-lg rounded-lg z-50 justify-center items-center space-y-4 p-4"
       id="recent-search"
     >
       {recentSearches.map(({ id, search }) => (

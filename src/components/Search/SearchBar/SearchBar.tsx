@@ -20,7 +20,11 @@ export const SearchBar = () => {
   return (
     <div
       id="search-bar"
-      className="flex flex-col items-center justify-center w-full mt-10 relative"
+      className="flex flex-col items-center justify-center w-full relative
+      mt-4
+      sm:mt-6
+      md:mt-10
+      "
     >
       <SearchIcon className="absolute left-4 text-grey-800" />
       <input

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pharma Library",
+  title: "Pharma Labs",
   description: "By - Santhosh Umapathi",
 };
 

@@ -5,7 +5,11 @@ export const Tag = ({ id, value }: TProps) => {
     <span
       key={id}
       id={`tag-${id}`}
-      className="text-sm bg-bgSecondary px-2 py-1 rounded-md mr-2 shadow-sm"
+      className="bg-bgSecondary py-1 shadow-sm mr-2
+      text-[10px] px-1 rounded-sm
+      sm:text-sm
+      md:text-sm md:px-2 md:rounded-md
+      "
     >
       #{value}
     </span>

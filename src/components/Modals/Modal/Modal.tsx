@@ -26,7 +26,12 @@ export const Modal = ({
       className={`flex fixed top-0 w-full h-full z-50 justify-center items-start bg-black/10 overflow-y-scroll py-20 ${className}`}
     >
       {/* Modal inside BG Overlay */}
-      <div className="flex flex-col items-center w-2/3 bg-white shadow-lg rounded-lg p-4 relative">
+      <div
+        className="flex flex-col items-center 
+      w-4/5
+      md:w-2/3 
+      bg-white shadow-lg rounded-lg p-4 relative"
+      >
         <div id="modal-header" className="flex w-full items-center mb-8">
           {title && (
             <span className="text-2xl font-bold text-left w-full">{title}</span>

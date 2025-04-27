@@ -4,7 +4,7 @@ export const useController = () => {
   const asset = useLibraryStore((state) => state.asset);
 
   // Capitalize the first letter of the asset type
-  const title =
+  const type =
     asset?.data.type.split("")[0].toUpperCase() +
     (asset?.data.type.slice(1).toLowerCase() || "");
 
@@ -28,7 +28,7 @@ export const useController = () => {
 
   return {
     asset,
-    title,
+    type,
     showTags,
     showMetrics,
     showBusinessQuestions,

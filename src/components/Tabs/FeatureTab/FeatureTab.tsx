@@ -20,6 +20,7 @@ export const FeatureTab = () => {
           showModal: showAssetModal,
           showLink: true,
           footerButtonClassName: "w-full",
+          footerButtonIcon: true,
         }}
       >
         <ExploreAssetModal />

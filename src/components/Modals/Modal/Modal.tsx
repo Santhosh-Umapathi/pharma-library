@@ -1,4 +1,4 @@
-import { CloseIcon, LinkIcon } from "@/components/icons";
+import { CloseIcon, FavoriteIcon, LinkIcon } from "@/components/icons";
 import { TProps } from "./types";
 import { useController } from "./controller";
 
@@ -11,6 +11,7 @@ export const Modal = ({
   showLink = false,
   className,
   footerButtonClassName,
+  footerButtonIcon = false,
 }: TProps) => {
   useController({ showModal });
 
@@ -43,6 +44,9 @@ export const Modal = ({
             type="button"
             onClick={footerButtonHandler}
           >
+            {footerButtonIcon && (
+              <FavoriteIcon className="w-5 h-5 mr-2 inline-block" />
+            )}
             {footerButtonText}
           </button>
         </div>

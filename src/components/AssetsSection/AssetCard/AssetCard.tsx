@@ -1,7 +1,6 @@
 import { PieChartIcon } from "@/components/icons";
 import { TProps } from "./types";
 import { useController } from "./controller";
-import { Modal } from "@/components/Modals/Modal";
 
 const CARD_ICONS = {
   layout: (

@@ -1,9 +1,11 @@
 import { RequestButton } from "@/components/RequestButton";
 import { TProps } from "./types";
+import { Logo } from "@/components/Logo";
 
 export const HeaderSection = ({ title, description }: TProps) => {
   return (
     <>
+      <Logo />
       <header
         id="header"
         className="flex flex-col items-center justify-center w-full"

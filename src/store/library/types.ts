@@ -17,6 +17,7 @@ export type TState = {
   moreAssets: TMoreAssets;
   searchResults: TSearch;
   showRequestModal: boolean;
+  showAssetModal: boolean;
 };
 
 //------------------------------------------------------------------
@@ -45,6 +46,7 @@ export type TActions = {
   setMoreAssets: (moreAssets: TMoreAssets) => void;
   setSearchResults: (searchResults: TSearch) => void;
   setShowRequestModal: (showRequestModal: boolean) => void;
+  setShowAssetModal: (showAssetModal: boolean) => void;
 };
 
 //------------------------------------------------------------------

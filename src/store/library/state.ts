@@ -8,4 +8,5 @@ export const state: TState = {
   moreAssets: [],
   searchResults: [],
   showRequestModal: false,
+  showAssetModal: false,
 };

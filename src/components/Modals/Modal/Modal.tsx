@@ -16,7 +16,7 @@ export const Modal = ({
 
   // Show modal
   return (
-    <div className="flex fixed top-0 left-0 right-0 bottom-0 z-100 justify-center items-center bg-black/10">
+    <div className="flex fixed top-0 left-0 right-0 bottom-0 z-50 justify-center items-center bg-black/10">
       {/* Modal inside BG Overlay */}
       <div className="flex flex-col justify-center items-center w-2/3 h-2/3 bg-white shadow-lg rounded-lg p-4 relative">
         {/* Close Icon */}

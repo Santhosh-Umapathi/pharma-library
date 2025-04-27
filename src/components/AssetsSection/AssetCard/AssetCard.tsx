@@ -1,6 +1,7 @@
 import { PieChartIcon } from "@/components/icons";
 import { TProps } from "./types";
 import { useController } from "./controller";
+import { Modal } from "@/components/Modals/Modal";
 
 const CARD_ICONS = {
   layout: (
@@ -17,7 +18,7 @@ export const AssetCard = ({
   date,
   showBg = false,
 }: TProps) => {
-  const { dateText } = useController({ date });
+  const { dateText, onClick } = useController({ date, id });
 
   return (
     <div
@@ -25,6 +26,7 @@ export const AssetCard = ({
       className={`flex justify-center p-4 items-center rounded-lg w-[49%] mb-1.5 cursor-pointer hover:opacity-70 transition-opacity ${
         showBg ? "bg-white shadow-md" : ""
       }`}
+      onClick={onClick}
     >
       <div className="flex justify-center items-center p-8 bg-bgSecondary rounded-lg">
         {CARD_ICONS[icon as keyof typeof CARD_ICONS]}

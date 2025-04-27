@@ -10,4 +10,5 @@ export type TProps = {
 export type TController = {
   date: TProps["date"];
   showBg?: TProps["showBg"];
+  id: TProps["id"];
 };

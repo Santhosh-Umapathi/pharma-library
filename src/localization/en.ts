@@ -61,4 +61,7 @@ export const en = {
     },
     submit: "Submit",
   },
+  assetModal: {
+    footerButtonText: "Favorite",
+  },
 };

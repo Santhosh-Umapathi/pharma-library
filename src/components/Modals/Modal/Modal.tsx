@@ -1,3 +1,4 @@
+"use client";
 import { CloseIcon, FavoriteIcon, LinkIcon } from "@/components/icons";
 import { TProps } from "./types";
 import { useController } from "./controller";

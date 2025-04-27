@@ -1,6 +1,6 @@
 import { GridIcon, InfoIcon } from "@/components/icons";
 import { useController } from "./controller";
-import { formatDate } from "@/helpers/data";
+import { formatDate } from "@/helpers";
 import { t } from "@/localization";
 
 const ICONS = {

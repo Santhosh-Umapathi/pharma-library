@@ -1,7 +1,7 @@
 import { useLibraryStore } from "@/store";
 import { TController } from "./types";
 import { getAsset } from "@/api/asset.api";
-import { formatDate } from "@/helpers/data";
+import { formatDate } from "@/helpers";
 
 export const useController = ({ date, id }: TController) => {
   const onClick = async () => {

@@ -2,7 +2,7 @@ import { getFeatured } from "@/api/featured.api";
 import { getTrending } from "@/api/trending.api";
 
 export const controller = async () => {
-  // Fetch the data from the API parallel
+  // Fetch the data on server from the API - parallel
   const fetchData = async () => {
     const [featured, trending] = await Promise.all([
       getFeatured(),

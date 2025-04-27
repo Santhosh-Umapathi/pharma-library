@@ -1,7 +1,6 @@
 import { HeaderSection } from "@/components/HeaderSection";
-import { SearchBar } from "@/components/SearchBar";
-import { TabComponent } from "@/components/Tabs/TabComponent";
-import { TopTabs } from "@/components/Tabs/TopTabs";
+import { SearchBar } from "@/components/Search";
+import { TabComponent, TopTabs } from "@/components/Tabs";
 import { t } from "@/localization";
 import { controller } from "./controller";
 

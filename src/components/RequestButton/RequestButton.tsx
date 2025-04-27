@@ -1,9 +1,8 @@
 "use client";
 import { t } from "@/localization";
 import { useController } from "./controller";
-import { RequestIcon } from "../icons";
-import { Modal } from "../Modals/Modal";
-import { RequestModal } from "../Modals/RequestModal";
+import { RequestIcon } from "@/components/icons";
+import { Modal, RequestModal } from "@/components/Modals";
 
 export const RequestButton = () => {
   const { onClick, closeModal, footerButtonText, showRequestModal } =

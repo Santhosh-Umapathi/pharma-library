@@ -2,7 +2,7 @@ import { AssetSection } from "@/components/AssetsSection";
 import { Modal } from "@/components/Modals/Modal";
 import { ShowMore } from "@/components/ShowMore";
 import { useController } from "./controller";
-import { ExploreAssetModal } from "@/components/Modals/ExploreAssetModal";
+import { ExploreAssetModal } from "@/components/Modals";
 
 export const FeatureTab = () => {
   const { closeModal, footerButtonText, showAssetModal } = useController();

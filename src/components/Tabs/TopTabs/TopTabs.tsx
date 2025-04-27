@@ -1,5 +1,5 @@
 import { t } from "@/localization";
-import { TopTab } from "@/components/Tabs/TopTab";
+import { TopTab } from "@/components/Tabs";
 import { TSelectedTab } from "@/store/library/types";
 
 export const TopTabs = () => {

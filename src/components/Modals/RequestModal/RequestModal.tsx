@@ -1,3 +1,4 @@
+"use client";
 import { Input } from "@/components/Input";
 import { useController } from "./controller";
 import { TForm } from "./types";

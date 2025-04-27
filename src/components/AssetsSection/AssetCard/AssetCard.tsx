@@ -6,7 +6,7 @@ const CARD_ICONS = {
   layout: (
     <PieChartIcon className="flex w-20 h-20 text-gray-300 justify-center items-center" />
   ),
-  // Can extend this object with more icons as needed, but key should match the type of tab
+  // Can extend this object with more icons as needed, but "key" should match the "type" of asset
 };
 
 export const AssetCard = ({

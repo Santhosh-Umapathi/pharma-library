@@ -1,3 +1,4 @@
+"use client";
 import { GridIcon, InfoIcon } from "@/components/icons";
 import { useController } from "./controller";
 import { formatDate } from "@/helpers";

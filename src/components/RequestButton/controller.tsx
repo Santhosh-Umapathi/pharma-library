@@ -3,11 +3,13 @@ import { useLibraryStore } from "@/store";
 
 export const useController = () => {
   const showRequestModal = useLibraryStore((state) => state.showRequestModal);
+
+  //Open request modal
   const onClick = () => {
     useLibraryStore.getState().setShowRequestModal(true);
   };
 
-  // Close modal handler
+  // Close request modal
   const closeModal = () => {
     if (!showRequestModal) return;
     useLibraryStore.setState({ showRequestModal: false });

@@ -2,9 +2,7 @@
 import { t } from "@/localization";
 import { useController } from "./controller";
 import { CloseIcon, SearchIcon } from "@/components/icons";
-
-import { RecentSearch } from "../RecentSearch";
-import { SearchResults } from "../SearchResults";
+import { RecentSearch, SearchResults } from "@/components/Search";
 
 export const SearchBar = () => {
   const {

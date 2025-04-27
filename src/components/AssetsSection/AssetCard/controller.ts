@@ -1,6 +1,6 @@
 import { useLibraryStore } from "@/store";
 import { TController } from "./types";
-import { getAsset } from "@/api/asset.api";
+import { getAsset } from "@/api";
 import { formatDate } from "@/helpers";
 
 export const useController = ({ date, id }: TController) => {

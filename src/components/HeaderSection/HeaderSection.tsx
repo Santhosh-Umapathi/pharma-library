@@ -1,4 +1,4 @@
-import { RequestButton } from "../RequestButton";
+import { RequestButton } from "@/components/RequestButton";
 import { TProps } from "./types";
 
 export const HeaderSection = ({ title, description }: TProps) => {

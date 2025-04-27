@@ -1,4 +1,4 @@
-import { getMoreAssets } from "@/api/moreAssets";
+import { getMoreAssets } from "@/api";
 import { useLibraryStore } from "@/store";
 import { useCallback, useEffect, useLayoutEffect } from "react";
 import { TController } from "./types";

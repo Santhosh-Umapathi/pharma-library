@@ -1,4 +1,4 @@
-import { AssetCard } from "../AssetCard";
+import { AssetCard } from "@/components/AssetsSection";
 import { useController } from "./controller";
 import { TProps } from "./types";
 

@@ -1,6 +1,5 @@
 import { t } from "@/localization";
-import { AssetSectionHeader } from "../AssetSectionHeader";
-import { AssetCards } from "../AssetCards";
+import { AssetSectionHeader, AssetCards } from "@/components/AssetsSection";
 import { useController } from "./controller";
 
 export const AssetSection = () => {

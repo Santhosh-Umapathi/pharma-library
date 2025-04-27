@@ -26,6 +26,7 @@ You can request access to certain assets, which are currently not authorized. Su
 ### 3. Featured & Trending Assets
 
 - List of all assets that are featured and trending
+- Tap to explore details of the asset
 
 ### 4. More Assets
 
@@ -33,7 +34,7 @@ You can request access to certain assets, which are currently not authorized. Su
 
 ### 5. Explore Assets
 
-- Get all the details of the assets
+- Get all the details of the assets, based on asset access
 
 By:
 

@@ -28,7 +28,7 @@ export const RequestButton = () => {
           footerButtonHandler: closeModal,
           footerButtonText,
           showModal: showRequestModal,
-          className: "items-center!",
+          className: "items-center! overflow-hidden!",
           title: t.requestForm.title,
         }}
       >

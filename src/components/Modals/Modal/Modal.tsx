@@ -1,5 +1,6 @@
 import { CloseIcon } from "@/components/icons";
 import { TProps } from "./types";
+import { useController } from "./controller";
 
 export const Modal = ({
   children,
@@ -8,6 +9,8 @@ export const Modal = ({
   footerButtonHandler,
   footerButtonText,
 }: TProps) => {
+  useController({ showModal });
+
   // Hide modal
   if (!showModal) return null;
 

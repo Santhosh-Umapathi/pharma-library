@@ -5,3 +5,7 @@ export type TProps = {
   footerButtonHandler: () => void;
   footerButtonText: string;
 };
+
+export type TController = {
+  showModal: TProps["showModal"];
+};

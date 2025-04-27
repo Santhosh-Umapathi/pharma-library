@@ -22,19 +22,19 @@ export type TData = {
   businessQuestions: TBusinessQuestion[];
 };
 
-type TBusinessQuestion = {
+export type TBusinessQuestion = {
   id: string;
   question: string;
   description: string;
 };
 
-type TMetric = {
+export type TMetric = {
   id: string;
   name: string;
   value: number | string;
 };
 
-type TTag = {
+export type TTag = {
   id: string;
   value: string;
 };

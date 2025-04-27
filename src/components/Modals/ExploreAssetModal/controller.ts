@@ -20,10 +20,17 @@ export const useController = () => {
     asset.data.metrics.length > 0
   );
 
+  const showBusinessQuestions = !!(
+    asset?.data &&
+    asset.data.businessQuestions &&
+    asset.data.businessQuestions.length > 0
+  );
+
   return {
     asset,
     title,
     showTags,
     showMetrics,
+    showBusinessQuestions,
   };
 };

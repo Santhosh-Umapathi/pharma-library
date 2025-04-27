@@ -2,6 +2,7 @@ import { AssetSection } from "@/components/AssetsSection";
 import { Modal } from "@/components/Modals/Modal";
 import { ShowMore } from "@/components/ShowMore";
 import { useController } from "./controller";
+import { ExploreAssetModal } from "@/components/Modals/ExploreAssetModal";
 
 export const FeatureTab = () => {
   const { closeModal, footerButtonText, showAssetModal } = useController();
@@ -17,10 +18,10 @@ export const FeatureTab = () => {
           footerButtonHandler: closeModal,
           footerButtonText,
           showModal: showAssetModal,
+          showLink: true,
         }}
       >
-        <div>Asset Modal</div>
-        {/* <RequestModal /> */}
+        <ExploreAssetModal />
       </Modal>
     </>
   );
